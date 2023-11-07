@@ -1,0 +1,49 @@
+.app__moviecard__cuttoff-text{
+    /* --max-lines: 3;
+    --line-height: 1.4; */
+
+    /* display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines); */
+
+    max-height: calc(var(--max-lines) * 1em * var(--line-height));
+    line-height: var(--line-height);
+    overflow: hidden;
+    position: relative;
+}
+
+.app__moviecard__cuttoff-text:has(+ .app__moviecard__expand-btn:not(:checked))::before{
+    content: '';
+    position: absolute;
+    height: calc(1em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, white);
+}
+
+.app__moviecard__expand-btn{
+    appearance: none;
+    border: 1px solid black;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+.app__moviecard__expand-btn:hover{
+    background-color: var(--color-gray);
+}
+
+.app__moviecard__expand-btn::before{
+    content: 'Expand';
+}
+
+.app__moviecard__expand-btn:checked::before{
+    content: 'Collapse';
+}
+
+.app__moviecard__cuttoff-text:has(+ .app__moviecard__expand-btn:checked){
+    max-height: none;
+}

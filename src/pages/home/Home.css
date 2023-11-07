@@ -1,0 +1,19 @@
+.app__home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--color-white);
+}
+
+.app__home_searchbar {
+    display: flex;
+    flex-direction: row;
+    margin: 25px;
+    width: 100%;
+    font-family: var(--font-base);
+    font-size: 1.5rem;
+}
+
+.app__home_searchbar_input {
+    margin-left: 15px;
+}
