@@ -3,6 +3,7 @@ import axios from 'axios';
 const api = {
   fetchMovies: async function () {
     const urlString = `${import.meta.env.VITE_APP_API}api/movies/getupcomingmovies`;
+    //console.log(urlString);
 
     // console.log(urlString);
     const response = await axios.get(urlString);
