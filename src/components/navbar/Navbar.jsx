@@ -115,7 +115,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <IconButton onClick={() => { }} sx={{ p: 0 }}>
-              <Avatar alt="KPilgrim" src={images.photo01} />
+              <Avatar alt="KPilgrim" src={images.default_img} />
             </IconButton>
           </Box>
         </Toolbar>

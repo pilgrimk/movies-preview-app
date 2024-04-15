@@ -48,7 +48,7 @@ html,
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Open Sans, ui-sans-serif, system-ui;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -548,11 +548,17 @@ video {
 
 .container{
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 640px){
   .container{
     max-width: 640px;
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -565,23 +571,33 @@ video {
 @media (min-width: 1024px){
   .container{
     max-width: 1024px;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 }
 
 @media (min-width: 1280px){
   .container{
     max-width: 1280px;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
 }
 
 @media (min-width: 1536px){
   .container{
     max-width: 1536px;
+    padding-right: 6rem;
+    padding-left: 6rem;
   }
 }
 
 .sticky{
   position: sticky;
+}
+
+.m-6{
+  margin: 1.5rem;
 }
 
 .mx-auto{
@@ -611,6 +627,14 @@ video {
   margin-top: 1.5rem;
 }
 
+.ml-16{
+  margin-left: 4rem;
+}
+
+.ml-8{
+  margin-left: 2rem;
+}
+
 .block{
   display: block;
 }
@@ -619,8 +643,16 @@ video {
   display: flex;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-px{
   height: 1px;
+}
+
+.min-h-screen{
+  min-height: 100vh;
 }
 
 .w-full{
@@ -635,8 +667,24 @@ video {
   flex-grow: 1;
 }
 
+.flex-row{
+  flex-direction: row;
+}
+
 .flex-col{
   flex-direction: column;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .rounded-md{
@@ -699,6 +747,22 @@ video {
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
+.bg-curtains{
+  background-image: url('/src/assets/curtains.jpg');
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-fixed{
+  background-attachment: fixed;
+}
+
+.p-16{
+  padding: 4rem;
+}
+
 .p-4{
   padding: 1rem;
 }
@@ -718,8 +782,16 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.pl-4{
+  padding-left: 1rem;
+}
+
 .text-center{
   text-align: center;
+}
+
+.font-neuton{
+  font-family: Neuton, ui-serif;
 }
 
 .text-2xl{
@@ -758,6 +830,11 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .underline{

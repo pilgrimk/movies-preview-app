@@ -47,7 +47,7 @@ const SignIn = () => {
 
       // call SignIn functionality here
       await UserSignIn(emailRef.current.value, passwordRef.current.value);
-      navigate('/dashboard')
+      navigate('/home')
     }
     catch (error) {
       console.log(error.message);
@@ -91,7 +91,7 @@ const SignIn = () => {
         Forgot password? <Link className='underline' to='/forgot-password'>Reset Password</Link>
       </div>
       <div className='w-100 text-center mt-6'>
-        Need to register? <Link className='underline' to='/signup'>Sign Up</Link>
+        Need to register? <Link className='underline' to='/sign-up'>Sign Up</Link>
       </div>
     </div>
   )

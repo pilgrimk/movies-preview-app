@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Alert, Box, Grid, Pagination, Divider } from '@mui/material'
 import { MovieCard } from '../../components'
 import moviehelper from '../../helpers/MovieHelper'
-import './Home.css'
 
 const Home = () => {
   const pageSize = 6;
@@ -90,14 +89,18 @@ const Home = () => {
           <React.Fragment />
         )}
       <div
-        className='app__home app__bg flex__center section__padding' id='home'
+        className='bg-curtains bg-cover w-full min-h-screen p-16 flex flex-col justify-center items-center text-white' id='home'
       >
-        <div className='app__home_searchbar'>
-          <div className='app__home_searchbar_label'>
+        <div
+          className='flex flex-row w-full m-6'
+        >
+          <div className='text-2xl font-neuton'>
             Search:
           </div>
-          <div className='app__home_searchbar_input'>
-            <input type='search'
+          <div className='text-2xl text-black ml-8'>
+            <input
+              className='pl-4'
+              type='search'
               onChange={e => setQuery(e.target.value)}
               value={query}
             />

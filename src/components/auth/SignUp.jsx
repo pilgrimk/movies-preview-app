@@ -56,7 +56,7 @@ const SignUp = () => {
 
       // call SignUp functionality here
       await UserSignUp(emailRef.current.value, passwordRef.current.value);
-      navigate('/signin')
+      navigate('/sign-in')
     }
     catch (error) {
       console.log(error.message);
@@ -104,7 +104,7 @@ const SignUp = () => {
       </form>
       <div className="flex-grow h-px bg-gray-400"></div>
       <div className='w-100 text-center mt-6'>
-        Already have an account? <Link className='underline' to='/signin'>Sign In</Link>
+        Already have an account? <Link className='underline' to='/sign-in'>Sign In</Link>
       </div>
     </div>
   )

@@ -6,8 +6,8 @@ import {
   Navigate
 } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
-import { Navbar, SignIn } from './components'
-import { Home, About, Footer } from './pages'
+import { Navbar, SignIn, SignUp, ForgotPassword } from './components'
+import { Home, MyMovies, About, Footer } from './pages'
 import './App.css';
 
 const App = () => {
@@ -18,8 +18,11 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/*' element={<Home />} />
+          <Route path='/my-movies' element={<MyMovies />} />
           <Route path='/about' element={<About />} />
           <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
         </Routes>
       </Router>
       <Footer />

@@ -1,7 +1,0 @@
-.app__about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 80vh;
-    color: var(--color-white);
-}
