@@ -89,7 +89,7 @@ const Home = () => {
           <React.Fragment />
         )}
       <div
-        className='bg-curtains bg-cover w-full min-h-screen p-16 flex flex-col justify-center items-center text-white' id='home'
+        className='bg-curtains bg-cover w-full min-h-screen p-16 flex flex-col items-center text-white' id='home'
       >
         <div
           className='flex flex-row w-full m-6'
