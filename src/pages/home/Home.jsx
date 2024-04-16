@@ -97,9 +97,9 @@ const Home = () => {
           <div className='text-2xl font-neuton'>
             Search:
           </div>
-          <div className='text-2xl text-black ml-8'>
+          <div className='text-2xl text-black mx-4 flex'>
             <input
-              className='pl-4'
+              className='pl-4 flex-shrink w-full'
               type='search'
               onChange={e => setQuery(e.target.value)}
               value={query}
