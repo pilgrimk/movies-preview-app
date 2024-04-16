@@ -14,18 +14,18 @@ const App = () => {
   return (
     <>
       <AuthProvider>
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path='/*' element={<Home />} />
-          <Route path='/my-movies' element={<MyMovies />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/sign-in' element={<SignIn />} />
-          <Route path='/sign-up' element={<SignUp />} />
-          <Route path='/forgot-password' element={<ForgotPassword />} />
-        </Routes>
-      </Router>
-      <Footer />
+        <Router>
+        <Navbar />
+          <Routes>
+            <Route path='/*' element={<Home />} />
+            <Route path='/my-movies' element={<MyMovies />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/sign-in' element={<SignIn />} />
+            <Route path='/sign-up' element={<SignUp />} />
+            <Route path='/forgot-password' element={<ForgotPassword />} />
+          </Routes>
+        </Router>
+        <Footer />
       </AuthProvider>
     </>
   )

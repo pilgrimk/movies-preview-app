@@ -1,20 +1,25 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from 'react'
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import Menu from '@mui/material/Menu'
+import MenuIcon from '@mui/icons-material/Menu'
+import Container from '@mui/material/Container'
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import MenuItem from '@mui/material/MenuItem'
 import images from '../../constants/images'
 import data from '../../constants/data'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../context/AuthContext'
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const navigate = useNavigate();
+  const { currentUser, UserSignOut } = useAuth();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -22,6 +27,22 @@ function Navbar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleLogIn = async () => {
+    navigate("/sign-in");
+  };
+
+  const handleLogOut = async () => {
+    // console.log("Logging out !!");
+
+    try {
+      await UserSignOut();
+      navigate("/home");
+    }
+    catch (error) {
+      console.log(error.message);
+    };
   };
 
   return (
@@ -115,8 +136,25 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <IconButton onClick={() => { }} sx={{ p: 0 }}>
-              <Avatar alt="KPilgrim" src={images.default_img} />
+              <Avatar alt="profilepic" src={images.default_img} />
             </IconButton>
+          </Box>
+          <Box>
+            {currentUser ?
+              <button
+                className="px-2"
+                type="text"
+                onClick={() => { handleLogOut() }}>
+                Log Out
+              </button>
+              :
+              <button
+              className="px-2"
+                type="text"
+                onClick={() => { handleLogIn() }}>
+                Log In
+              </button>
+            }
           </Box>
         </Toolbar>
       </Container>
