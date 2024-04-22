@@ -4,7 +4,7 @@ import { MovieCard } from '../../components'
 import moviehelper from '../../helpers/MovieHelper'
 
 const Home = () => {
-  const pageSize = 6;
+  const pageSize = 8;
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
   const [alertState, setAlertState] = useState(false);
